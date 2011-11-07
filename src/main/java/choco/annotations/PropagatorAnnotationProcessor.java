@@ -48,15 +48,7 @@ import static javax.tools.Diagnostic.Kind;
 //@SupportedAnnotationTypes({"choco.annotation.PropAnn"})
 @SupportedAnnotationTypes({"*"})
 @SupportedSourceVersion(SourceVersion.RELEASE_6)
-//@SupportedOptions({"outputFile"})
 public class PropagatorAnnotationProcessor extends AbstractProcessor {
-
-    private ProcessingEnvironment environment;
-
-    @Override
-    public void init(ProcessingEnvironment environment) {
-        this.environment = environment;
-    }
 
     public boolean process(
             Set<? extends TypeElement> annotations, RoundEnvironment roundEnvironment) {
@@ -71,7 +63,6 @@ public class PropagatorAnnotationProcessor extends AbstractProcessor {
             Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(elementTodo);
             messager.printMessage(Kind.NOTE, "<< start annotations processing >>");
 
-            //String outputFile = environment.getOptions().get("outputFile");
 
             if (!elements.isEmpty()) {
                 StringBuilder st = new StringBuilder("\nPropagators:");
@@ -83,7 +74,6 @@ public class PropagatorAnnotationProcessor extends AbstractProcessor {
                 try {
                     PrintWriter pw = new PrintWriter(filer.createResource(
                             StandardLocation.SOURCE_OUTPUT,
-//                            StandardLocation.locationFor(outputFile),
                             "", "propagators.txt")
                             .openOutputStream());
 
