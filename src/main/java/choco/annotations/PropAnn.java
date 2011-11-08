@@ -29,6 +29,7 @@ package choco.annotations;
 import java.lang.annotation.*;
 
 /**
+ * An annotation to define the testing level of a propagator.
  * <br/>
  *
  * @author Charles Prud'homme
