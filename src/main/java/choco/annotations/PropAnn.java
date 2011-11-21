@@ -46,6 +46,7 @@ public @interface PropAnn {
         CORRECTION,
         CONSISTENCY,
         IDEMPOTENCE,
+        MONOTONIC,
         BENCHMARK,
         NO_TEST
     }
