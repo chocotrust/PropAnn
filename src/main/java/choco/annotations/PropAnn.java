@@ -48,6 +48,7 @@ public @interface PropAnn {
         IDEMPOTENCE,
         MONOTONIC,
         BENCHMARK,
-        NO_TEST
+        NO_TEST,
+        EXPLAINED
     }
 }
