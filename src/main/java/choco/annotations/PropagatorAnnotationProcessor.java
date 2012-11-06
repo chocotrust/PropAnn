@@ -27,7 +27,6 @@
 package choco.annotations;
 
 import javax.annotation.processing.*;
-import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.util.Elements;
@@ -45,9 +44,7 @@ import static javax.tools.Diagnostic.Kind;
  * @author Charles Prud'homme
  * @since 07/11/11
  */
-//@SupportedAnnotationTypes({"choco.annotation.PropAnn"})
 @SupportedAnnotationTypes({"*"})
-@SupportedSourceVersion(SourceVersion.RELEASE_6)
 public class PropagatorAnnotationProcessor extends AbstractProcessor {
 
     public boolean process(
