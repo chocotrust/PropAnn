@@ -11,9 +11,9 @@
     <url>http://maven.apache.org</url>
 
     <scm>
-        <connection>scm:git:git@github.com:chocoteam/PropAnn</connection>
-        <developerConnection>scm:git:git@github.com:chocoteam/PropAnn</developerConnection>
-        <url>git@github.com:chocoteam/PropAnn.git</url>
+        <connection>scm:git:git://github.com/chocoteam/PropAnn</connection>
+        <developerConnection>scm:git:git://github.com/chocoteam/PropAnn</developerConnection>
+        <url>git://github.com/chocoteam/PropAnn.git</url>
     </scm>
 
     <properties>
