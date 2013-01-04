@@ -66,7 +66,9 @@ public class PropagatorAnnotationProcessor extends AbstractProcessor {
 
                 for (Element element : elements) {
                     PropAnn pa = element.getAnnotation(PropAnn.class);
-                    st.append(String.format("\n> %s : %s", element.getSimpleName(), Arrays.toString(pa.tested())));
+                    if(pa!= null){
+                        st.append(String.format("\n> %s : %s", element.getSimpleName(), Arrays.toString(pa.tested())));
+                    }
                 }
                 try {
                     PrintWriter pw = new PrintWriter(filer.createResource(
